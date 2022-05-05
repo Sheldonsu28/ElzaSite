@@ -1,0 +1,59 @@
+#introSection {
+  display: flex;
+  height: fit-content;
+  min-height: 20vh;
+  width: 100%;
+  grid-column: 3/9;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#introCard {
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  min-height: 20vh;
+  width: 100%;
+  grid-column: 2/9;
+  flex-wrap: wrap;
+  background-color:aliceblue;
+}
+
+#introPic {
+  max-height: fit-content;
+  flex: 1 400px;
+  max-width: 500px;
+  align-self: center;
+}
+
+#introText {
+  display: flex;
+  flex-direction: column;
+  flex: 1 400px;
+  align-items: flex-start;
+  align-content: center;
+  color: aliceblue;
+  text-align: justify;
+  margin-left: 10%;
+  margin-right: 10%;
+  align-items: center;
+}
+
+#introSection h1{
+  font-size: 200%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: black;
+}
+
+#introSection h2 {
+  font-size: 200%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+#introSection h3 {
+  font-size: 200%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}

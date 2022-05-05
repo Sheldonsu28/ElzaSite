@@ -1,0 +1,59 @@
+#root {
+
+  background-image: url(./out.png);
+  background-attachment: fixed;
+  background-size: cover;
+  /* height: 100vh; */
+}
+
+#announcement {
+  background-color: black;
+}
+
+#postPreview {
+  display: flex;
+  flex: 1 500px;
+  flex-wrap: wrap;
+  grid-column: 2 / 5;
+  justify-content: left;
+  height: fit-content;
+}
+
+#contentSection {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  height: fit-content;
+}
+
+#contentSection h1 {
+  grid-column: 3;
+  color: white;
+}
+
+#recentPost {
+  grid-column: 2/10;
+  border-top: 1px solid black;
+  margin-top: 2%;
+}
+
+#recentPost h1 {
+  align-self: initial;
+}
+
+#intro {
+  height: 100vh; 
+  opacity: 0.5;
+  background-color:black;
+}
+
+#intro h1{
+  color: white;
+}
+
+#icu {
+  font-size: 800%;
+  color: white;
+  margin-top: 15vh;
+}
