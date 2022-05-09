@@ -1,0 +1,17 @@
+{
+  "name": "elza-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "IamNightFury",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongodb": "^4.5.0",
+    "typedi": "^0.10.0",
+    "winston": "^3.7.2"
+  }
+}
