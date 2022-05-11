@@ -1,13 +1,9 @@
 import mongoose from 'mongoose';
-import { log } from '../../utils/log/winston';
-
-const logTag = `[${__filename}][DB]: `;
-
 //数据库初始化
 
 export default class Database {
   connect() {
-    log.info(logTag, 'Initializing...');
+    console.log('初始化...');
 
     this.initializeMongoose();
   }
@@ -21,16 +17,13 @@ export default class Database {
    */
 
   initializeMongoose() {
-    log.info(logTag, 'Connecting...');
-
+    console.log('连接数据库...');
     mongoose.connect(process.env.DATABASE_KEY, {
       useNewUrlParser: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
       useUnifiedTopology: true,
     });
 
-    log.info(logTag, 'Connection successful');
+    console.log('成功连接数据库');
   }
 }
 

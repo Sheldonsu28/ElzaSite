@@ -5,7 +5,7 @@ import crypto from 'crypto';
 export default class UserService{
 
   constructor(){
-    this.userRepository = Container.get(UserRepository);
+    this.userRepository = new UserRepository();
   }
 
   async createUser(user){
@@ -15,5 +15,9 @@ export default class UserService{
 
   async findByEmail(email){
     return this.userRepository.findByEmail(email);
+  }
+
+  async test(){
+    return {hi:'hi'};
   }
 }

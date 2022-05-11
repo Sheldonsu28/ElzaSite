@@ -1,21 +1,22 @@
-import { Service } from 'typedi';
 import { Router } from 'express';
 import UserService from "../../services/Users";
 
-const UserController = Service([UserService], service => {
-  const router = Router();
+const UserController = ()=>{
+    const router = Router();
+    const service = new UserService()
 
-  return (()=>{
     router.post('/register', (req, res, next)=>{
       const user = req.body;
-      service.createUser(user).then(user=>res.json(user));
+      service.createUser(user).then(user=>res.json(user)).catch(next);
     });
 
     router.post('/findUserByEmail', (req, res, next)=>{
-      const email = req.body;
-      service.findByEmail(email).then(user=>res.json(user));
+      
+      service.findByEmail(email).then(user=>res.json(user)).catch(next);
     })
-  })
-})
 
-export default UserController;
+    return router;
+  }
+
+
+export default UserController();
