@@ -1,6 +1,6 @@
 #root {
 
-  background-image: url(./out.png);
+  background-image: url(../../../assets/out.png);
   background-attachment: fixed;
   background-size: cover;
   /* height: 100vh; */
@@ -25,11 +25,21 @@
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   height: fit-content;
+  align-items: center;
 }
 
 #contentSection h1 {
   grid-column: 3;
   color: white;
+}
+
+#registry {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  grid-column: 3/9;
+  color: white;
+  justify-content: space-around;
 }
 
 #recentPost {
@@ -53,7 +63,7 @@
 }
 
 #icu {
-  font-size: 800%;
+  font-size: 600%;
   color: white;
   margin-top: 15vh;
 }

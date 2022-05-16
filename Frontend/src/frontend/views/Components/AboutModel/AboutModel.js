@@ -1,10 +1,11 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import './AboutModel.css';
-import Modeler from './Dokex-尚尚.png';
-import design from './design.jpg';
-import design_bili from './画画的DanGo.gif'
-import { CardMedia, Divider, Typography, Button, Avatar, CardHeader } from '@mui/material';
+import Modeler from '../../../../assets/Dokex-尚尚.png';
+import design from '../../../../assets/design.jpg';
+import design_bili from '../../../../assets/画画的DanGo.gif'
+import ImageViewer from '../ImageViewer';
+import { Divider, Typography, Button, Avatar, CardHeader, Link, CardContent} from '@mui/material';
 import { Box } from '@mui/system';
 
 const AboutModel = () => {
@@ -12,11 +13,8 @@ const AboutModel = () => {
     <div id="AboutModel">
       <h1 id="title" style={{color:'white'}}>关于艾尔莎的皮：</h1>
         <Card id='modelCard' sx={{ borderRadius:'20px'}}>
-
-          <CardMedia component="img" image={design} sx={{maxHeight:'fir-content'}}/>
-          
-          <Divider sx={{width:'100%'}}/>
-          
+          <ImageViewer src={design}/>
+                    
           <Box sx={{height: 'fit-content', marginTop:'1%'}}>
             <Box sx={{ justifyContents:'center', minWidth: 'fit-content', width:'100%', height: 'fit-content'}}>
 
@@ -27,7 +25,7 @@ const AboutModel = () => {
               </Divider>
               <Box sx={{display: 'flex', flexWrap:'wrap', flexDirection:'row', width:"100%", justifyContent:'center'}}>
 
-                <Button disableRipple='True' disableFocusRipple='True' href='https://weibo.com/soramiao'>
+                <Button disableRipple disableFocusRipple href='https://weibo.com/soramiao'>
                   <CardHeader
                     avatar={
                       <Avatar
@@ -40,7 +38,7 @@ const AboutModel = () => {
                   />
                 </Button>
 
-                <Button disableRipple='True' disableFocusRipple='True' href='https://space.bilibili.com/1437180'>
+                <Button disableRipple disableFocusRipple href='https://space.bilibili.com/1437180'>
                   <CardHeader
                     avatar={
                       <Avatar
@@ -68,7 +66,7 @@ const AboutModel = () => {
               </Divider>
               <Box sx={{display: 'flex', flexWrap:'wrap', flexDirection:'row', width:"100%", justifyContent:'center'}}>
 
-                <Button disableRipple='True' disableFocusRipple='True' href='https://space.bilibili.com/10857187'>
+                <Button disableRipple disableFocusRipple href='https://space.bilibili.com/10857187'>
                   <CardHeader
                     avatar={
                       <Avatar
@@ -84,13 +82,13 @@ const AboutModel = () => {
             </Box>
 
             
-            <Box sx={{ justifyContents:'center', minWidth: 'fit-content', width:'100%', height: 'fit-content'}}>
+            <Box sx={{ justifyContents:'center', minWidth: 'fit-content', width:'100%', minHeight: 'fit-content'}}>
               <Divider variant="middle">
                 <Typography gutterBottom variant="h5" component="div" marginBottom='0.2%'>
                   演示
                 </Typography>
               </Divider>
-              <iframe src="//player.bilibili.com/player.html?aid=419986250&bvid=BV1S3411q7mH&cid=391888610&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+              <iframe src="//player.bilibili.com/player.html?aid=419986250&bvid=BV1S3411q7mH&cid=391888610&page=1" scrolling="auto" border="0" frameborder="no" framespacing="0" width='auto' height='auto' allowFullScreen="allowfullscreen"> </iframe>
               <h5 className='text'>
                 谁能想到这个皮现在这么屑了呢...
               </h5>

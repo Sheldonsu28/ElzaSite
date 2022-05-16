@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-import './IntroSection.css';
-import {CardContent, CardMedia, Divider, Typography, Button, Link } from '@mui/material';
-import Elza from './ELZA.jpg'
-import { Box, height } from '@mui/system';
+import './aboutElza.css';
+import {CardContent, CardMedia, Divider, Typography, Link } from '@mui/material';
+import Elza from '../../../../assets/ELZA.jpg'
+import { Box } from '@mui/system';
 
 
 const AboutElza = () => {
@@ -11,7 +11,7 @@ const AboutElza = () => {
     <div id="introSection">
       <h1 id="introTitle" style={{color:'white'}}>关于艾尔莎本人：</h1>
         <Card id='introCard' sx={{ borderRadius:'20px'}}>
-
+          
           <CardMedia component="img" image={Elza} sx={{width:'auto', height:'100'}}/>
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyItems:'center', margin:'auto'}}>
             <Box>

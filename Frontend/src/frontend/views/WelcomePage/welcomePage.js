@@ -1,20 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import AppBar from '@material-ui/core/AppBar';
-// import Button from '@material-ui/core/Button';
-// import backgroundImage from './out.png'
 import Grid from '@material-ui/core/Grid';
 import './welcomePage.css'
-import PostPreview from '../Components/PostPreview' 
 import AboutElza from '../Components/AboutElza'
 import AboutModel from '../Components/AboutModel'
+import ImageViewer from '../Components/ImageViewer';
+import { Button } from '@mui/material';
 
 
 const WelcomePage = ()=>{
-    // const [readTime, setTime] = useState('');
     useEffect(()=>{
-        // setInterval(()=>{
-        //     setTime(new Date().toLocaleTimeString())
-        // }, 1000);
         document.title = "ELZA YORK!"
     }, [])
 
@@ -22,7 +17,7 @@ const WelcomePage = ()=>{
       <div id="root">
             <div id='intro'>
                 <AppBar style={{background:'transparent', boxShadow:'none'}} position='sticky'>
-                    <Grid container spacing>
+                    <Grid container>
                         <Grid item xs>
                             <h1 style={{margin:'0', color:'white'}}>艾薯条.icu</h1>
                         </Grid>
@@ -34,6 +29,9 @@ const WelcomePage = ()=>{
             <div id='contentSection'>
                 <AboutElza/>
                 <AboutModel/>
+
+                <h5 id='registry'>陕ICP备2021014934号-1</h5>
+
             </div>
       </div>  
     );

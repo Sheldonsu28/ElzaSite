@@ -1,1 +1,1 @@
-export {default} from './IntroSection.js'
+export {default} from './aboutElza.js'
