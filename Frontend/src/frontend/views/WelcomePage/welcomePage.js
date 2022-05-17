@@ -4,8 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import './welcomePage.css'
 import AboutElza from '../Components/AboutElza'
 import AboutModel from '../Components/AboutModel'
-import ImageViewer from '../Components/ImageViewer';
-import { Button } from '@mui/material';
 
 
 const WelcomePage = ()=>{
@@ -24,7 +22,7 @@ const WelcomePage = ()=>{
                     </Grid>
                 </AppBar>
                 <p id='icu'>艾尔莎<br />我们真的 <br /> 好~ 喜~ 欢~ 你~ 啊~</p>
-                <h1>好了，发完病了，下滑了解更多的她！</h1>
+                <h1 id='subsection'>好了，发完病了，下滑了解更多的她！</h1>
             </div>
             <div id='contentSection'>
                 <AboutElza/>

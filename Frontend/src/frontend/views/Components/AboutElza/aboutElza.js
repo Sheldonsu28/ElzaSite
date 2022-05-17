@@ -2,22 +2,22 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import './aboutElza.css';
 import {CardContent, CardMedia, Divider, Typography, Link } from '@mui/material';
-import Elza from '../../../../assets/ELZA.jpg'
+import Elza from '../../../../assets/elza_thumb.jpg'
 import { Box } from '@mui/system';
 
 
 const AboutElza = () => {
   return (
     <div id="introSection">
-      <h1 id="introTitle" style={{color:'white'}}>关于艾尔莎本人：</h1>
-        <Card id='introCard' sx={{ borderRadius:'20px'}}>
+      <h1 className='sectionTitle'>关于艾尔莎本人</h1>
+        <Card id='introCard'>
           
           <CardMedia component="img" image={Elza} sx={{width:'auto', height:'100'}}/>
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyItems:'center', margin:'auto'}}>
             <Box>
-              <h1>全体目光向我看齐汪！</h1>
-              <h3>我是redcircle所属的活泼后辈系冒险家</h3>
-              <h2>艾尔莎•霍德芬拉克斯•约克</h2>
+              <h1 className='elzaIntro'>全体目光向我看齐汪！</h1>
+              <h3 className='elzaIntro'>我是redcircle所属的活泼后辈系冒险家</h3>
+              <h2 className='elzaIntro'>艾尔莎•霍德芬拉克斯•约克</h2>
             </Box>
           </Box>
           <Divider sx={{width:'100%'}}/>
@@ -29,12 +29,7 @@ const AboutElza = () => {
               <Typography gutterBottom variant="h5" component="div" marginBottom='0.2%'>
                 自我介绍
               </Typography>
-
-              <CardMedia component='iframe'
-              image="//player.bilibili.com/player.html?aid=847393362&bvid=BV1yL4y1e7VJ&cid=391069974&page=1"
-              sx={{width:'50%', margin:'auto'}}
-              />
-
+              <iframe src="//player.bilibili.com/player.html?aid=847393362&bvid=BV1yL4y1e7VJ&cid=391069974&page=1" scrolling="auto" border="0" frameBorder="no" framespacing="0" width='auto' height='auto' allowFullScreen={true}> </iframe>
               <CardContent>
                 <Typography variant="body2" color="text.secondary">
                 <Link href='https://www.bilibili.com/video/BV1yL4y1e7VJ?share_source=copy_web' underline='none'>
@@ -52,10 +47,8 @@ const AboutElza = () => {
                 出道曲
               </Typography>
 
-              <CardMedia component='iframe'
-              image="//player.bilibili.com/player.html?aid=974844293&bvid=BV1s44y1y7tr&cid=387911876&page=1"
-              sx={{width:'50%', margin:'auto'}}
-              />
+              <iframe src="//player.bilibili.com/player.html?aid=974844293&bvid=BV1s44y1y7tr&cid=387911876&page=1" scrolling="auto" border="0" frameBorder="no" framespacing="0" width='auto' height='auto' allowFullScreen={true}> </iframe>
+
               <CardContent>
                 <Typography variant="body2" color="text.secondary">
                 <Link href='https://www.bilibili.com/video/BV1s44y1y7tr?share_source=copy_web' underline='none'>

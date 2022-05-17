@@ -1,59 +1,117 @@
-#introSection {
-  display: flex;
-  height: fit-content;
-  min-height: 20vh;
-  width: 100%;
-  grid-column: 3/9;
-  flex-wrap: wrap;
-  justify-content: space-around;
+@media screen and (orientation:landscape) {
+  #introSection {
+    display: flex;
+    height: fit-content;
+    min-height: 20vh;
+    width: 100%;
+    grid-column: 3/9;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #introCard {
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    min-height: 20vh;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color:aliceblue;
+    border-radius: 20px;
+  }
+
+  .sectionTitle {
+    color: white;
+    margin-bottom: 0;
+  }
+
+  #introPic {
+    max-height: fit-content;
+    flex: 1 400px;
+    max-width: 500px;
+    align-self: center;
+  }
+
+  #introText {
+    display: flex;
+    flex-direction: column;
+    flex: 1 400px;
+    align-items: flex-start;
+    align-content: center;
+    color: aliceblue;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+  }
+
+  #title {
+    font-size: 200%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: black;
+  }
+
+  .elzaIntro {
+    font-size: 200%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: black;
+  }
 }
 
-#introCard {
-  display: flex;
-  height: fit-content;
-  justify-content: center;
-  min-height: 20vh;
-  width: 100%;
-  grid-column: 2/9;
-  flex-wrap: wrap;
-  background-color:aliceblue;
-}
+@media screen and (orientation:portrait) {
+  #introSection {
+    display: flex;
+    height: fit-content;
+    min-height: 20vh;
+    width: 100%;
+    grid-column: 1/11;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
-#introPic {
-  max-height: fit-content;
-  flex: 1 400px;
-  max-width: 500px;
-  align-self: center;
-}
+  #introCard {
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    min-height: 20vh;
+    width: 100%;
+    grid-column: 1/11;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+  }
 
-#introText {
-  display: flex;
-  flex-direction: column;
-  flex: 1 400px;
-  align-items: flex-start;
-  align-content: center;
-  color: aliceblue;
-  text-align: justify;
-  margin-left: 10%;
-  margin-right: 10%;
-  align-items: center;
-}
+  .sectionTitle {
+    color: white;
+    margin-bottom: 0;
+  }
 
-#introSection h1{
-  font-size: 200%;
-  margin-top: 0%;
-  margin-bottom: 0%;
-  color: black;
-}
+  #introPic {
+    max-height: fit-content;
+    flex: 1 400px;
+    max-width: 500px;
+    align-self: center;
+  }
 
-#introSection h2 {
-  font-size: 200%;
-  margin-top: 0%;
-  margin-bottom: 0%;
-}
+  #introText {
+    display: flex;
+    flex-direction: column;
+    flex: 1 400px;
+    align-items: flex-start;
+    align-content: center;
+    color: aliceblue;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+  }
 
-#introSection h3 {
-  font-size: 200%;
-  margin-top: 0%;
-  margin-bottom: 0%;
+  .elzaIntro {
+    font-size: 200%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: black;
+  }
+
 }

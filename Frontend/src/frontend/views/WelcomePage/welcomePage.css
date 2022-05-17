@@ -1,69 +1,106 @@
-#root {
+@media screen and (orientation:landscape) {
+  #root {
+    background-image: url(../../../assets/desktop_elza.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    /* height: 100vh; */
+  }
 
-  background-image: url(../../../assets/out.png);
-  background-attachment: fixed;
-  background-size: cover;
-  /* height: 100vh; */
+  #announcement {
+    background-color: black;
+  }
+
+  #postPreview {
+    display: flex;
+    flex: 1 500px;
+    flex-wrap: wrap;
+    grid-column: 2 / 5;
+    justify-content: left;
+    height: fit-content;
+  }
+
+  #contentSection {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    height: fit-content;
+    align-items: center;
+  }
+
+  #intro {
+    height: 100vh;
+    opacity: 0.5;
+    background-color: black;
+  }
+
+  #subsection{
+    color: white;
+  }
+
+  #icu {
+    font-size: 600%;
+    color: white;
+    margin-top: 15vh;
+  }
+
+  #registry{
+    color: white;
+    grid-column: 3 / 9;
+    align-content: center;
+  }
 }
 
-#announcement {
-  background-color: black;
-}
+@media screen and (orientation:portrait) {
+  #root {
+    background-image: url(../../../assets/mobile_elza.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    /* height: 100vh; */
+  }
 
-#postPreview {
-  display: flex;
-  flex: 1 500px;
-  flex-wrap: wrap;
-  grid-column: 2 / 5;
-  justify-content: left;
-  height: fit-content;
-}
+  #announcement {
+    background-color: black;
+  }
 
-#contentSection {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  height: fit-content;
-  align-items: center;
-}
+  #postPreview {
+    display: flex;
+    flex: 1 500px;
+    flex-wrap: wrap;
+    grid-column: 2 / 5;
+    justify-content: left;
+    height: fit-content;
+  }
 
-#contentSection h1 {
-  grid-column: 3;
-  color: white;
-}
+  #contentSection {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    height: fit-content;
+    align-items: center;
+  }
 
-#registry {
-  display: flex;
-  height: fit-content;
-  width: 100%;
-  grid-column: 3/9;
-  color: white;
-  justify-content: space-around;
-}
+  #intro {
+    height: 100vh;
+    opacity: 0.5;
+    background-color: black;
+  }
 
-#recentPost {
-  grid-column: 2/10;
-  border-top: 1px solid black;
-  margin-top: 2%;
-}
+  #intro h1 {
+    color: white;
+  }
 
-#recentPost h1 {
-  align-self: initial;
-}
+  #icu {
+    font-size: 400%;
+    color: white;
+    margin-top: 15vh;
+  }
 
-#intro {
-  height: 100vh; 
-  opacity: 0.5;
-  background-color:black;
-}
+  #registry {
+    color: white;
+    grid-column: 3 / 9;
+    align-content: center;
+  }
 
-#intro h1{
-  color: white;
-}
-
-#icu {
-  font-size: 600%;
-  color: white;
-  margin-top: 15vh;
 }
