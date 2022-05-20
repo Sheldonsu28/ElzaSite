@@ -16,7 +16,7 @@
     min-height: 20vh;
     width: 100%;
     flex-wrap: wrap;
-    background-color:aliceblue;
+    background-color: rgba(240, 248, 255, 1);
     border-radius: 20px;
   }
 
@@ -79,7 +79,7 @@
     width: 100%;
     grid-column: 1/11;
     flex-wrap: wrap;
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 1);
   }
 
   .sectionTitle {
@@ -108,7 +108,7 @@
   }
 
   .elzaIntro {
-    font-size: 200%;
+    font-size: 120%;
     margin-top: 0%;
     margin-bottom: 0%;
     color: black;

@@ -1,18 +1,22 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import './aboutElza.css';
-import {CardContent, CardMedia, Divider, Typography, Link } from '@mui/material';
+import {CardContent, CardMedia, Divider, Typography, Link, CardActionArea } from '@mui/material';
 import Elza from '../../../../assets/elza_thumb.jpg'
 import { Box } from '@mui/system';
 
 
 const AboutElza = () => {
+  const redirect = ()=>{
+    window.open('https://space.bilibili.com/1521415')
+  }
   return (
     <div id="introSection">
       <h1 className='sectionTitle'>关于艾尔莎本人</h1>
         <Card id='introCard'>
-          
-          <CardMedia component="img" image={Elza} sx={{width:'auto', height:'100'}}/>
+          <CardActionArea onClick={redirect} sx={{width:'auto'}}>
+            <CardMedia component="img" image={Elza} sx={{width:'auto', height:'100'}}/>
+          </CardActionArea>
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyItems:'center', margin:'auto'}}>
             <Box>
               <h1 className='elzaIntro'>全体目光向我看齐汪！</h1>
@@ -22,7 +26,7 @@ const AboutElza = () => {
           </Box>
           <Divider sx={{width:'100%'}}/>
           
-          <Box sx={{ display: 'flex', flexWrap:'wrap', justifyContent:'center', width:'100%', height: 'fit-content', marginTop:'1%'}}>
+          <Box sx={{ display: 'flex', flexWrap:'wrap', justifyContent:'center', width:'100%', height: 'fit-content', marginTop:'3%'}}>
 
             <Box sx={{justifyItems:'center', minWidth: 'fit-content', width:'50%', height: 'fit-content'}}>
 

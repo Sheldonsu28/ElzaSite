@@ -8,7 +8,7 @@ import AboutModel from '../Components/AboutModel'
 
 const WelcomePage = ()=>{
     useEffect(()=>{
-        document.title = "ELZA YORK!"
+        // document.title = "ELZA YORK!"
     }, [])
 
     return (
@@ -21,7 +21,7 @@ const WelcomePage = ()=>{
                         </Grid>
                     </Grid>
                 </AppBar>
-                <p id='icu'>艾尔莎<br />我们真的 <br /> 好~ 喜~ 欢~ 你~ 啊~</p>
+                <p id='icu'>艾尔莎<br />我们真的 <br /> 好喜欢你啊</p>
                 <h1 id='subsection'>好了，发完病了，下滑了解更多的她！</h1>
             </div>
             <div id='contentSection'>
