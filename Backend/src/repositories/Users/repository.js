@@ -1,5 +1,4 @@
 import UserModel from "../../models/Users/model";
-import UserEntity from "../../entities/Users/entity";
 
 export default class UserRepository{
   constructor(){
@@ -11,10 +10,13 @@ export default class UserRepository{
   }
 
   async findByEmail(email){
-    return this.model.find({email}).then((res)=>{
-      return new UserEntity(res);
-    });
+    return this.model.find({email})
   }
+
+  async findByUsername(username){
+    return this.model.find({username})
+  }
+
   async findAll(){
     return this.model.findAll();
   }

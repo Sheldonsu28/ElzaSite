@@ -51,11 +51,22 @@
 }
 
 @media screen and (orientation:portrait) {
-  #root {
-    background-image: url(../../../assets/mobile_elza.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    /* height: 100vh; */
+  @supports (-webkit-touch-callout: none) {
+    #root {
+        background-image: url(../../../assets/mobile_elza.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        /* height: 100vh; */
+    }
+  }
+
+  @supports not (-webkit-touch-callout: none) {
+    #root {
+        background: url(../../../assets/mobile_elza.jpg) no-repeat top center fixed;
+        /* background-attachment: fixed; */
+        background-size: 100vh;
+        /* height: 100vh; */
+      }
   }
 
   #announcement {

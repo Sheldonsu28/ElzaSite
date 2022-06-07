@@ -6,6 +6,7 @@ Backend/node_modules
 Frontend/.pnp
 Backend/.pnp
 .pnp.js
+.env
 
 # testing
 Frontend/coverage

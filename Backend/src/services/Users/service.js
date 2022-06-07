@@ -1,6 +1,5 @@
 import UserRepository from "../../repositories/Users/repository";
-import Container from "typedi";
-import crypto from 'crypto';
+import { passwordHash } from "../../Utils/auth";
 
 export default class UserService{
 
@@ -9,15 +8,15 @@ export default class UserService{
   }
 
   async createUser(user){
-    user.password = crypto.createHmac('sha256', 'ELZA YORK!').update(user.password).digest('hex');
+    user.password = passwordHash(user.password);
     return this.userRepository.create(user);
+  }
+
+  async findByUsername(username){
+    return this.userRepository.findByUsername(username).then(users=>users[0]);
   }
 
   async findByEmail(email){
     return this.userRepository.findByEmail(email);
-  }
-
-  async test(){
-    return {hi:'hi'};
   }
 }

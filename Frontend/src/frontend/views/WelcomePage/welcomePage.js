@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
-import './welcomePage.css'
-import AboutElza from '../Components/AboutElza'
-import AboutModel from '../Components/AboutModel'
+import './welcomePage.css';
+import AboutElza from '../Components/AboutElza';
+import AboutModel from '../Components/AboutModel';
+import axios from 'axios';
 
 
 const WelcomePage = ()=>{
     useEffect(()=>{
-        // document.title = "ELZA YORK!"
+        axios.get
     }, [])
 
     return (

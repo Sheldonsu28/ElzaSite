@@ -1,10 +1,9 @@
 import mongoose from 'mongoose';
 
-
 const Users = new mongoose.Schema({
   email: String,
   password: String,
-  name: String,
+  username: String,
   created_date: Date,
   admin: Boolean,
 });

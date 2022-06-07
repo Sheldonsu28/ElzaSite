@@ -1,5 +1,7 @@
-import UserController from "./Users/controller";
+import UserController from "./Users/controller.js";
 
-export const routerManager = (app)=>{
+const routerManager = (app) => {
   app.use('/users', UserController);
 }
+
+export default routerManager;
