@@ -5,11 +5,17 @@ export default class PostsService{
     this.repository = new PostsRepository();
   }
   
+  async fetchAllPosts(){
+    return this.repository.fetchAll();
+  }
+
   async createPost(post){
+    if (!post) throw Error('内容为空');
     return this.repository.createPost(post);
   }
 
   async deletePostById(id){
+    if (!post) throw Error('id为空');
     return this.deletePostById(id);
   }
 

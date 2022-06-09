@@ -1,16 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
 import './welcomePage.css';
 import AboutElza from '../Components/AboutElza';
 import AboutModel from '../Components/AboutModel';
-import axios from 'axios';
+import AboutSlicers from '../Components/AboutSlicers';
 
 
 const WelcomePage = ()=>{
-    useEffect(()=>{
-        axios.get
-    }, [])
 
     return (
       <div id="root">
@@ -28,6 +25,7 @@ const WelcomePage = ()=>{
             <div id='contentSection'>
                 <AboutElza/>
                 <AboutModel/>
+                <AboutSlicers/>
 
                 <h5 id='registry'>陕ICP备2021014934号-1</h5>
 

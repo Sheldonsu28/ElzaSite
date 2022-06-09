@@ -10,11 +10,11 @@ import { Box } from '@mui/system';
 
 const AboutModel = () => {
   return (
-    <div id="AboutModel">
+    <div className='sectionContainer'>
 
       <h1 className='sectionTitle'>关于艾尔莎的皮</h1>
 
-      <Card id='modelCard'>
+      <Card id='contentCard'>
         <ImageViewer src={design}/>
                   
         <Box sx={{height: 'fit-content', marginTop:'1%'}}>

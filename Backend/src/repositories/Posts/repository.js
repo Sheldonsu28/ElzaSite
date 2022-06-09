@@ -5,6 +5,10 @@ export default class PostsRepository{
     this.model = PostsModel;
   }
 
+  async fetchAll(){
+    return this.model.find({});
+  }
+
   async createPost(post){
     return this.model.create(post);
   }

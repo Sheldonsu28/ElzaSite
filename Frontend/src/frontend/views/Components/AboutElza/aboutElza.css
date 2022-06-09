@@ -1,24 +1,4 @@
 @media screen and (orientation:landscape) {
-  #introSection {
-    display: flex;
-    height: fit-content;
-    min-height: 20vh;
-    width: 100%;
-    grid-column: 3/9;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  #introCard {
-    display: flex;
-    height: fit-content;
-    justify-content: center;
-    min-height: 20vh;
-    width: 100%;
-    flex-wrap: wrap;
-    background-color: rgba(240, 248, 255, 1);
-    border-radius: 20px;
-  }
 
   .sectionTitle {
     color: white;
@@ -61,26 +41,6 @@
 }
 
 @media screen and (orientation:portrait) {
-  #introSection {
-    display: flex;
-    height: fit-content;
-    min-height: 20vh;
-    width: 100%;
-    grid-column: 1/11;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  #introCard {
-    display: flex;
-    height: fit-content;
-    justify-content: center;
-    min-height: 20vh;
-    width: 100%;
-    grid-column: 1/11;
-    flex-wrap: wrap;
-    background-color: rgba(240, 248, 255, 1);
-  }
 
   .sectionTitle {
     color: white;
