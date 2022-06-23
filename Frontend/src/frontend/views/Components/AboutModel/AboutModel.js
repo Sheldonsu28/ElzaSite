@@ -5,7 +5,7 @@ import Modeler from '../../../../assets/Dokex-尚尚.png';
 import design from '../../../../assets/design.jpg';
 import design_bili from '../../../../assets/画画的DanGo.gif'
 import ImageViewer from '../ImageViewer';
-import { Divider, Typography, Button, Avatar, CardHeader, Link, CardContent} from '@mui/material';
+import { Divider, Typography, Button, Avatar, CardHeader} from '@mui/material';
 import { Box } from '@mui/system';
 
 const AboutModel = () => {
@@ -20,7 +20,7 @@ const AboutModel = () => {
         <Box sx={{height: 'fit-content', marginTop:'1%'}}>
           <Box sx={{ justifyContents:'center', minWidth: 'fit-content', width:'100%', height: 'fit-content'}}>
 
-            <Divider variant="middle">
+            <Divider variant="middle" sx={{width:'100%'}}>
               <Typography gutterBottom variant="h5" component="div" marginBottom='0.2%'>
                 绘制
               </Typography>

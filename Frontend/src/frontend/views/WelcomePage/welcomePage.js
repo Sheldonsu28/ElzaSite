@@ -7,8 +7,8 @@ import AboutModel from '../Components/AboutModel';
 import AboutSlicers from '../Components/AboutSlicers';
 
 
-const WelcomePage = ()=>{
 
+const WelcomePage = ()=>{
     return (
       <div id="root">
             <div id='intro'>
@@ -26,7 +26,7 @@ const WelcomePage = ()=>{
                 <AboutElza/>
                 <AboutModel/>
                 <AboutSlicers/>
-
+                
                 <h5 id='registry'>陕ICP备2021014934号-1</h5>
 
             </div>

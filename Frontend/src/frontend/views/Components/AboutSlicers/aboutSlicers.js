@@ -1,30 +1,49 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "@mui/material";
-import axios from "axios";
+import { Divider, Typography, Card, Box,} from '@mui/material';
+import MontageController from "../../../controllers/Montages";
+import VideoViewer from "../VideoView/videoView";
+
+const AuthorView = (props)=>{
+  return (
+    <Box sx={{ justifyContents:'center', minWidth: 'fit-content', maxWidth:'100%', height: 'fit-content'}}>
+      <Divider variant="middle" sx={{width:'100%'}}>
+        <Typography gutterBottom variant="h5" component="div" marginTop='0.2%'>
+          {props.videos.author}
+        </Typography>
+      </Divider>
+      <Box sx={{ display: 'flex', flexWrap:'wrap', justifyContent:'center', width:'100%', height: 'fit-content', marginTop:'3%'}}>
+        {props.videos.videoInfos.map(video=> {
+          return (
+            <VideoViewer info={{aid: video.aid, 
+                                bvid: video.bvid, 
+                                description:video.description}}
+                                title=""/>
+          )
+        })
+        }
+      </Box>
+    </Box>
+  );
+}
 
 const SlicerView = (props)=>{
-  const slicers = [{auth: '诺音Noyin', mid: 484951879}]
   const [slicerInfo, setSlicerInfo] = useState([]);
-
-  const getslicerInfo = async (slicer)=>{
-      
-    return axios.get(`https://cors-anywhere.herokuapp.com/http://api.bilibili.com/x/space/arc/search?mid=484951879&keyword=艾尔莎&pn=1&ps=10`);
-  }
   
   useEffect(()=>{
    
-
-    for (let i = 0; i < slicers.length; i++){
-      setTimeout(()=>{getslicerInfo(slicers[i]).then(res=>{console.log(res)})}, 200)
-    }
+    MontageController.fetchAll().then(data=>{setSlicerInfo(data)})
+    
   }, [])
   return (
    <div className='sectionContainer'>
       <h1 className='sectionTitle'>艾尔莎的切片man们</h1>
         <Card id='contentCard'>
-          
+          <Box sx={{height: 'fit-content', marginTop:'1%'}}>
+            {slicerInfo.map(vids=>{
+              return <AuthorView videos={vids}/>
+            })}
+          </Box>
         </Card>
-        <iframe url='http://api.bilibili.com/x/space/arc/search?mid=484951879&keyword=艾尔莎&pn=1&ps=10'></iframe>
     </div>
   );
 }
