@@ -18,12 +18,13 @@ export default class Database {
 
   initializeMongoose() {
     console.log('连接数据库...');
+    console.log(`数据库连接： ${process.env.DATABASE_KEY}`);
     mongoose.connect(process.env.DATABASE_KEY, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+    }).then(res=>{
+       console.log('成功连接数据库');
     });
-
-    console.log('成功连接数据库');
   }
 }
 
