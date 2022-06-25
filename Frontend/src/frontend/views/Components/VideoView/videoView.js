@@ -1,32 +1,36 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React from "react";
 import {CardContent, Typography, Link } from '@mui/material';
 import { Box } from '@mui/system';
 import './videoView.css';
 const VideoViewer = (props) =>{
 
-  const [iframeLink, setIframeLink] = useState('');
-  const [videoLink, setVideoLink] = useState('');
+  const iframeLink = `//player.bilibili.com/player.html?aid=${props.info.aid}&bvid=${props.info.bvid}&page=1`;
+  const videoLink = `https://www.bilibili.com/video/${props.info.bvid}?share_source=copy_web`;
 
-  useEffect(()=>{
-    setIframeLink(`//player.bilibili.com/player.html?aid=${props.info.aid}&bvid=${props.info.bvid}&page=1`);
-    setVideoLink(`https://www.bilibili.com/video/${props.info.bvid}?share_source=copy_web`);
-  }, [])
-
-
+  let description = props.info.description;
+  if (props.intab && description.length > 20){
+    description = description.slice(0, 15) + '...';
+    
+  }
+  
   return (
-    <Box sx={{justifyItems:'center', minWidth: 'fit-content', width:'20%', margin:'0 auto 0', height: 'fit-content'}}>
+    <Box sx={{justifyContent:'center', minWidth:'280px', maxWidth:'30%', padding:'0 1%', height:'fit-content'}}>
 
-      <Typography gutterBottom variant="h5" component="div" marginBottom='0.2%'>
-        {props.title}
-      </Typography>
+      {
+        props.title == ""? 
+        null: 
+        <Typography gutterBottom variant="h5" component="div" marginBottom='0.2%'>
+          {props.title}
+        </Typography>
+      }
 
-      <iframe src={iframeLink} scrolling="auto" border="0" frameBorder="no" framespacing="0" width='auto' height='auto' allowFullScreen={true}> </iframe>
+      <iframe src={iframeLink} scrolling="auto" border="0" frameBorder="no" framespacing="0" width='100%' height='auto' allowFullScreen={true}> </iframe>
 
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-        <Link className="display-linebreak" href={videoLink} underline='none'>
-          {props.info.description}
-        </Link>
+      <CardContent sx={{padding:0}}>
+        <Typography variant="body2" color="text.secondary"  textOverflow='ellipsis' >
+          <Link target="_blank" href={videoLink} underline='none' padding='0' textOverflow='ellipsis' sx ={{}}>
+            {description}
+          </Link>
         </Typography>
       </CardContent>
     </Box>

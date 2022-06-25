@@ -27,7 +27,7 @@ const AboutElza = () => {
           </Box>
           <Divider sx={{width:'100%'}}/>
           
-          <Box sx={{ display: 'flex', flexWrap:'wrap', justifyContent:'center', width:'100%', height: 'fit-content', marginTop:'3%'}}>
+          <Box sx={{ display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly', width:'100%', height: 'fit-content', marginTop:'3%'}}>
 
             <VideoViewer info={{aid: 847393362, 
                                 bvid:"BV1yL4y1e7VJ", 
