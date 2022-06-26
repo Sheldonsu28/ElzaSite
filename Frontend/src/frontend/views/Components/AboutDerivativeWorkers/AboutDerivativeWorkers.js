@@ -30,17 +30,17 @@ const AuthorView = (props)=>{
   );
 }
 
-const SlicerView = (props)=>{
+const DerivativeWorkerView = (props)=>{
   const [slicerInfo, setSlicerInfo] = useState([]);
   
   useEffect(()=>{
    
-    MontageController.fetchAllMontange().then(data=>{setSlicerInfo(data)});
+    MontageController.fetchAllDerivativeWork().then(data=>{setSlicerInfo(data)});
     
   }, [])
   return (
    <div className='sectionContainer'>
-      <h1 className='sectionTitle'>艾尔莎的切片man们</h1>
+      <h1 className='sectionTitle'>艾尔莎的二创man们</h1>
       <Card id='contentCard'>
         <Box sx={{height: '100%', marginTop:'1%', width:'100%'}}>
           {slicerInfo.map((vids)=>{
@@ -52,4 +52,4 @@ const SlicerView = (props)=>{
   );
 }
 
-export default SlicerView;
+export default DerivativeWorkerView;

@@ -5,6 +5,7 @@ import './welcomePage.css';
 import AboutElza from '../Components/AboutElza';
 import AboutModel from '../Components/AboutModel';
 import AboutSlicers from '../Components/AboutSlicers';
+import AboutDerivativeWorkers from '../Components/AboutDerivativeWorkers';
 
 
 
@@ -26,6 +27,7 @@ const WelcomePage = ()=>{
                 <AboutElza/>
                 <AboutModel/>
                 <AboutSlicers/>
+                <AboutDerivativeWorkers/>
                 
                 <h5 id='registry'>陕ICP备2021014934号-1</h5>
 

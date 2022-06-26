@@ -5,8 +5,12 @@ export default class MontagesRepository{
     this.model = MontagesModels;
   }
 
-  async fetchAll(){
-    return this.model.find({});
+  async fetchAllMontage(){
+    return this.model.find({type:0});
+  }
+
+  async fetchAllDerivativeWork(){
+    return this.model.find({type:1});
   }
 
   async insertOrUpdateByChannelId(montage){

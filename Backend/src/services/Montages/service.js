@@ -6,7 +6,11 @@ export default class MontagesService{
   }
   
   async fetchAllMontages(){
-    return this.repository.fetchAll();
+    return this.repository.fetchAllMontage();
+  }
+
+   async fetchAllDerivativeWork(){
+    return this.repository.fetchAllDerivativeWork();
   }
 
  async insertOrUpdateByChannelId(montage){

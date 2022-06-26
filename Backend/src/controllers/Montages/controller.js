@@ -10,6 +10,10 @@ const MontagesController = () => {
     service.fetchAllMontages().then(posts=> res.json(posts)).catch(next);
   });
 
+  router.get('/fetchAllDerivativeWork', (req, res, next)=>{
+    service.fetchAllDerivativeWork().then(posts=> res.json(posts)).catch(next);
+  });
+
   return router;
 }
 

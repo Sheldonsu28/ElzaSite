@@ -7,12 +7,21 @@ import cookieSession from "cookie-session";
 import morgan from 'morgan';
 import updateMontages from './Utils/montage';
 import {config} from 'dotenv';
+import {join, dirname} from 'path';
+import { fileURLToPath } from 'url';
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
+
 
 config();
 const app = express();
 // CORS
 app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Origin', 'http://192.168.0.105:4000');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -51,6 +60,12 @@ const port = app.get('port');
 
 app.listen(port, () => {
   console.log('服务器启动成功, 端口', port);
+});
+
+app.use(express.static(join(__dirname, '../build')));
+
+app.get("*", (req, res) => {
+  res.sendFile(join(__dirname, "../build/index.html"));
 });
 
 setInterval(()=>{updateMontages()}, 1000 * 3600);
