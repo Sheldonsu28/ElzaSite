@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Divider, Typography, Box, List, ListItem} from '@mui/material';
 import VideoCard from "../VideoCard/videoCard";
 import ContentContainer from "../ContentContainer";
+import './videoContents.css'
 
 const useHorizontalScroll = () => {
   const elRef = useRef();
@@ -31,7 +32,7 @@ const AuthorView = (props)=>{
           {props.videos.author}
         </Typography>
       </Divider>
-      <Box sx={{overflowX:'auto', width:'100%', overflow: 'hidden'}} ref={scrollRef}>
+      <Box id='scroll' sx={{overflowX:'auto', width:'100%'}} ref={scrollRef}>
         <List sx={{maxHeight: 300, display:'flex'}}>
             {props.videos.videoInfos.map((video)=> {
               return (

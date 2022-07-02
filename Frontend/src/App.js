@@ -7,7 +7,7 @@ config();
 
 
 function App() {
-  console.log(process.env.HOST_URL)
+  console.log('哈哈！ 大白猫！')
   return (
       <div className="App">
           <WelcomePage/>

@@ -2,7 +2,6 @@ import React from 'react';
 import { CardActionArea , Card, CardContent, CardMedia, Typography} from '@mui/material';
 
 const VideoCard = (props) =>{
-  console.log(props.info);
   return (
     <Card sx={{ width:'170px', height:'170px' }} component="div">
       <CardActionArea sx={{height:'100%'}} onClick={()=>{window.open(`https://www.bilibili.com/video/${props.info.bvid}`, "_blank")}}>

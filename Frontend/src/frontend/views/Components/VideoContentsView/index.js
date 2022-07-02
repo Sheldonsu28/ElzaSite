@@ -1,1 +1,1 @@
-export {default} from './videoContens'
+export {default} from './videoContents.js'
