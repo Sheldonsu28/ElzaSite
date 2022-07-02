@@ -4,8 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import './welcomePage.css';
 import AboutElza from '../Components/AboutElza';
 import AboutModel from '../Components/AboutModel';
-import AboutSlicers from '../Components/AboutSlicers';
-import AboutDerivativeWorkers from '../Components/AboutDerivativeWorkers';
+import VideoContentsView from '../Components/VideoContentsView';
+import MontageController from '../../controllers/Montages';
 
 
 
@@ -26,8 +26,9 @@ const WelcomePage = ()=>{
             <div id='contentSection'>
                 <AboutElza/>
                 <AboutModel/>
-                <AboutSlicers/>
-                <AboutDerivativeWorkers/>
+                <VideoContentsView sectionTitle={'艾尔莎的切片man们'} fetchCallback={MontageController.fetchAllMontange}/>
+                <VideoContentsView sectionTitle={'艾尔莎的二创man们'} fetchCallback={MontageController.fetchAllDerivativeWork}/>
+                
                 
                 <h5 id='registry'>陕ICP备2021014934号-1</h5>
 

@@ -8,6 +8,9 @@ export default class MontagesService{
   async fetchAllMontages(){
     return this.repository.fetchAllMontage();
   }
+  async fetchAll(){
+    return this.repository.fetchAll();
+  }
 
    async fetchAllDerivativeWork(){
     return this.repository.fetchAllDerivativeWork();

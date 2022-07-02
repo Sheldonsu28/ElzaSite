@@ -4,7 +4,12 @@ const Montages = new mongoose.Schema({
   channelId: String,
   author: String,
   type: Number,
-  videoInfos: [{type: Object}],
+  videoInfos: [{type:{
+    bvid: String,
+    title: String,
+    aid: String,
+    pic: String
+  }}],
 });
 
 const MontagesModels = mongoose.model('Montages', Montages);

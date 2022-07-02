@@ -8,10 +8,7 @@ const VideoViewer = (props) =>{
   const videoLink = `https://www.bilibili.com/video/${props.info.bvid}?share_source=copy_web`;
 
   let description = props.info.description;
-  if (props.intab && description.length > 20){
-    description = description.slice(0, 15) + '...';
-    
-  }
+  
   
   return (
     <Box sx={{justifyContent:'center', minWidth:'280px', maxWidth:'30%', padding:'0 1%', height:'fit-content'}}>

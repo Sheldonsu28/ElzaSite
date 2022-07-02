@@ -9,6 +9,10 @@ export default class MontagesRepository{
     return this.model.find({type:0});
   }
 
+  async fetchAll(){
+    return this.model.find({});
+  }
+
   async fetchAllDerivativeWork(){
     return this.model.find({type:1});
   }
