@@ -1,13 +1,9 @@
 import './App.css';
 import WelcomePage from './frontend/views/WelcomePage';
 
-import {config} from 'dotenv';
-
-config();
-
 
 function App() {
-  console.log('哈哈！ 大白猫！')
+  console.log('大白猫！她是一只快乐的猫咪！')
   return (
       <div className="App">
           <WelcomePage/>

@@ -1,8 +1,8 @@
 import React from 'react';
 import './AboutModel.css';
-import Modeler from '../../../../assets/Dokex-尚尚.png';
+import Modeler from '../../../../assets/Dokex.png';
 import design from '../../../../assets/design.jpg';
-import design_bili from '../../../../assets/画画的DanGo.gif'
+import design_bili from '../../../../assets/DanGo.gif'
 import ImageViewer from '../ImageViewer';
 import ContentContainer from '../ContentContainer';
 import { Divider, Typography, Button, Avatar, CardHeader} from '@mui/material';

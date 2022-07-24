@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
 import './welcomePage.css';
@@ -10,6 +10,7 @@ import MontageController from '../../controllers/Montages';
 
 
 const WelcomePage = ()=>{
+
     return (
       <div id="root">
             <div id='intro'>
@@ -20,7 +21,7 @@ const WelcomePage = ()=>{
                         </Grid>
                     </Grid>
                 </AppBar>
-                <p id='icu'>艾尔莎<br />我们真的 <br /> 好喜欢你啊</p>
+                <p id='icu'>哈哈！<br/>大白猫！<br/> 你出道一周年辣！</p>
                 <h1 id='subsection'>好了，发完病了，下滑了解更多的她！</h1>
             </div>
             <div id='contentSection'>
@@ -28,7 +29,6 @@ const WelcomePage = ()=>{
                 <AboutModel/>
                 <VideoContentsView sectionTitle={'艾尔莎的切片man们'} fetchCallback={MontageController.fetchAllMontange}/>
                 <VideoContentsView sectionTitle={'艾尔莎的二创man们'} fetchCallback={MontageController.fetchAllDerivativeWork}/>
-                
                 
                 <h5 id='registry'>陕ICP备2021014934号-1</h5>
 

@@ -52,23 +52,22 @@ const AuthorView = (props)=>{
   );
 }
 
-const VideoContentsView = (props)=>{
+const withContentsView = (Component)=> (props) =>{
   const [authorInfo, setAuthorInfo] = useState([]);
   
   useEffect(()=>{
-   
     props.fetchCallback().then(data=>{
       data.sort((a, b)=>b.videoInfos.length - a.videoInfos.length);
       setAuthorInfo(data);
     });
-    
   }, [])
+
   return (
    
     <ContentContainer sectionTitle={props.sectionTitle}>
       <Box sx={{height: '100%', marginTop:'1%', width:'100%'}}>
         {authorInfo.map((vids)=>{
-          return <AuthorView key={vids.author} videos={vids}/>
+          return <Component key={vids.author} videos={vids}/>
         })}
       </Box>
     </ContentContainer>
@@ -76,4 +75,4 @@ const VideoContentsView = (props)=>{
   );
 }
 
-export default VideoContentsView;
+export default withContentsView(AuthorView);

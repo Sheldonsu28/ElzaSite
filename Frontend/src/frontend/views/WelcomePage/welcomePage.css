@@ -41,6 +41,8 @@
     font-size: 600%;
     color: white;
     margin-top: 15vh;
+    animation: mymove 0.4s infinite alternate;
+    position: relative;
   }
 
   #registry{
@@ -48,45 +50,22 @@
     grid-column: 3 / 9;
     align-content: center;
   }
-
-  .sectionContainer {
-    display: flex;
-    height: fit-content;
-    min-height: 20vh;
-    width: 100%;
-    grid-column: 3/9;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  #contentCard {
-    display: flex;
-    height: fit-content;
-    justify-content: center;
-    min-height: 20vh;
-    width: 100%;
-    flex-wrap: wrap;
-    background-color: rgba(240, 248, 255, 1);
-    border-radius: 20px;
-  }
 }
 
 @media screen and (orientation:portrait) {
   @supports (-webkit-touch-callout: none) {
     #root {
-        background-image: url(../../../assets/mobile_elza.jpg);
-        background-attachment: fixed;
-        background-size: cover;
-        /* height: 100vh; */
+      background-image: url(../../../assets/mobile_elza.jpg) no-repeat top center;
+      background-attachment: scroll;
+      background-size: 100vw;
+      /* height: 100vh; */
     }
   }
 
   @supports not (-webkit-touch-callout: none) {
     #root {
         background: url(../../../assets/mobile_elza.jpg) no-repeat top center fixed;
-        /* background-attachment: fixed; */
         background-size: 100vh;
-        /* height: 100vh; */
       }
   }
 
@@ -125,6 +104,8 @@
     font-size: 400%;
     color: white;
     margin-top: 15vh;
+    animation: mymove 0.4s infinite alternate;
+    position: relative;
   }
 
   #registry {
@@ -132,26 +113,14 @@
     grid-column: 3 / 9;
     align-content: center;
   }
+}
 
-  .sectionContainer {
-    display: flex;
-    height: fit-content;
-    min-height: 20vh;
-    width: 100%;
-    grid-column: 1/11;
-    flex-wrap: wrap;
-    justify-content: space-around;
+@keyframes mymove {
+  from {
+    top: 0px;
   }
 
-  #contentCard {
-    display: flex;
-    height: fit-content;
-    justify-content: center;
-    min-height: 20vh;
-    width: 100%;
-    grid-column: 1/11;
-    flex-wrap: wrap;
-    background-color: rgba(240, 248, 255, 1);
+  to {
+    top: 30px;
   }
-
 }

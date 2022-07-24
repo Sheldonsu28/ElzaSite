@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const MontageController = (()=> {
   const MontageAxios = axios.create({
-    baseURL:'http://xn--rrv961dbic.icu/',
+    baseURL:process.env.REACT_APP_HOST_URL,
     withCredentials: true,
   })
 

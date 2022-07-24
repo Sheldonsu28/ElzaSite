@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '@mui/material/Card';
+import './contentContainer.css';
 
 const ContentContainer = (props) => {
   return (
