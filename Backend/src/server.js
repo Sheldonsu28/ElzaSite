@@ -33,10 +33,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('combined'));
 // app.enable('trust proxy');
 
-app.use(cookieSession({
-  secret: 'ELZA',
-  maxAge: 60 * 60 * 24 * 1000, // 24h
-}))
+// app.use(cookieSession({
+//   secret: 'ELZA',
+//   maxAge: 60 * 60 * 24 * 1000, // 24h
+// }))
 
 // Force HTTPS
 // app.use(function(request, response, next) {
