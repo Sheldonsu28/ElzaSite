@@ -75,4 +75,5 @@ const withContentsView = (Component)=> (props) =>{
   );
 }
 
+export {AuthorView};
 export default withContentsView(AuthorView);

@@ -1,6 +1,9 @@
 import './App.css';
 import WelcomePage from './frontend/views/WelcomePage';
-
+//        /\               /\
+//       //\\             //\\
+//      //  \\           //  \\
+//     //    \\_________//    \\
 
 function App() {
   console.log('大白猫！她是一只快乐的猫咪！')

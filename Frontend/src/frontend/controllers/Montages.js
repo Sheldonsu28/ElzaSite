@@ -9,6 +9,7 @@ const MontageController = (()=> {
   return {
     fetchAllMontange: async () => MontageAxios.get('/montages/fetchAllMontages').then(res=>res.data),
     fetchAllDerivativeWork: async () => MontageAxios.get('/montages/fetchAllDerivativeWork').then(res=>res.data),
+    fetchAllStreamRecordings: async () => MontageAxios.get('/montages/fetchAllStreamRecordings').then(res=>res.data),
   }
 })();
 

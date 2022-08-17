@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './aboutElza.css';
 import {CardMedia, Divider, CardActionArea } from '@mui/material';
 import Elza from '../../../../assets/elza_thumb.jpg'
 import VideoViewer from '../VideoView/videoView';
 import ContentContainer from '../ContentContainer';
+import { AuthorView } from '../VideoContentsView/videoContents';
 import { Box } from '@mui/system';
 
 
-const AboutElza = () => {
+const AboutElza = (props) => {
   const redirect = ()=>{
     window.open('https://space.bilibili.com/1521415')
   }
+  const [recordings, setRecordings] = useState({author:'艾尔莎快餐店', videoInfos:[]});
+
+  useEffect(()=>{
+    props.fetchCallback().then(data=>{
+      data[0].author = '录播'
+      setRecordings(data[0]);
+    });
+  }, [])
   return (
     
     <ContentContainer sectionTitle={'关于艾尔莎本人'}>
@@ -37,8 +46,9 @@ const AboutElza = () => {
                             bvid:"BV1s44y1y7tr", 
                             description:" L❤VING PUNCH\n 就由艾尔莎来给您爱感满溢的Loving Punch！"}}
                       title="出道曲"/>
-        
+        <AuthorView key={'艾尔莎快餐店'} videos={recordings}/>
       </Box>
+
     </ContentContainer>
       
   );
