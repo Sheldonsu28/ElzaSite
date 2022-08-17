@@ -17,6 +17,10 @@ export default class MontagesRepository{
     return this.model.find({type:1});
   }
 
+  async fetchAllStreamRecordings(){
+    return this.model.find({type:3});
+  }
+
   async insertOrUpdateByChannelId(montage){
     return this.model.updateOne(
       {

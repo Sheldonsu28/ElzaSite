@@ -14,6 +14,10 @@ const MontagesController = () => {
     service.fetchAllDerivativeWork().then(posts=> res.json(posts)).catch(next);
   });
 
+  router.get('/fetchAllStreamRecordings', (req, res, next)=>{
+    service.fetchAllStreamRecordings().then(posts=> res.json(posts)).catch(next);
+  })
+
   return router;
 }
 

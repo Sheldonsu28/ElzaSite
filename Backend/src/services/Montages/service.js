@@ -8,13 +8,18 @@ export default class MontagesService{
   async fetchAllMontages(){
     return this.repository.fetchAllMontage();
   }
+  
   async fetchAll(){
     return this.repository.fetchAll();
   }
 
-   async fetchAllDerivativeWork(){
+  async fetchAllDerivativeWork(){
     return this.repository.fetchAllDerivativeWork();
   }
+
+ async fetchAllStreamRecordings(){
+  return this.repository.fetchAllStreamRecordings();
+ }
 
  async insertOrUpdateByChannelId(montage){
     if (!montage) throw Error('内容为空');
