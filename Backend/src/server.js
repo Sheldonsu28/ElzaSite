@@ -3,7 +3,6 @@ import express from 'express';
 import routerManager from "./controllers";
 import ErrorHandler from './controllers/Error/';
 import middlewares from "./middlewares/";
-import cookieSession from "cookie-session";
 import morgan from 'morgan';
 import updateMontages from './Utils/montage';
 import {config} from 'dotenv';
