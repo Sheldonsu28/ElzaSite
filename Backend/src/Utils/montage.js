@@ -5,6 +5,7 @@ import MontagesService from "../services/Montages/service";
 const montagesService = new MontagesService();
 
 const updateMontages = async () => {
+  console.log(new Date(), ': 开始执行视频列表更新');
   const data = await UtilsModel.find({itemName: {$in:['Slicers', 'Creaters', 'Elza']}});
   const existing_entries = await montagesService.fetchAll();
 
@@ -18,12 +19,13 @@ const updateMontages = async () => {
 
 
   data.forEach((target)=>{
-     const {
-      itemName,
-      userMids,  
-      lastFetched, 
-      maxFetch,
-      type
+
+    const {
+    itemName,
+    userMids,  
+    lastFetched, 
+    maxFetch,
+    type
     } = target;
 
     let fetchCounter = lastFetched;
@@ -31,14 +33,16 @@ const updateMontages = async () => {
     let time_counter = 0;
 
     if (userMids.length > 0){
-
       while (limiter > 0){
-        time_counter = time_counter + Math.random() * (1500 - 500) + 500;
+
+        time_counter = time_counter + Math.random() * (1500 - 500) + 1000;
         const channelId = userMids[fetchCounter];
 
         setTimeout(()=>{
             const encodedLink = encodeURI(`http://api.bilibili.com/x/space/arc/search?mid=${channelId}&keyword=艾尔莎&pn=1&ps=10`);
+
             axios.get(encodedLink).then(async (res)=>{
+
               const { list } = res.data.data;
               const { vlist } = list;
               const videoInfos = []
@@ -66,12 +70,21 @@ const updateMontages = async () => {
                 const montage = {author, channelId, type, videoInfos:videoInfos.concat(existedInfo)};
                 montagesService.insertOrUpdateByChannelId(montage);
               }
+
               console.log(`已更新MID:${channelId}, 总计${newId.length}个新视频。`);
+
+          }).catch((error)=>{
+
+            console.log(`=================更新${channelId}时发生错误=================`);
+            console.log(error);
+            console.log(`===========================================================`);
+
           });
         }, time_counter);
         
         fetchCounter = (fetchCounter + 1) % userMids.length;
         limiter--;
+
         if (fetchCounter == 0){
           break;
         }
