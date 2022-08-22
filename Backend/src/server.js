@@ -14,8 +14,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 
-
-
 config();
 const app = express();
 // CORS
@@ -31,21 +29,6 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('combined'));
 app.enable('trust proxy');
-
-// app.use(cookieSession({
-//   secret: 'ELZA',
-//   maxAge: 60 * 60 * 24 * 1000, // 24h
-// }))
-
-// Force HTTPS
-// app.use(function(request, response, next) {
-
-//     if (process.env.NODE_ENV != 'development' && !request.secure) {
-//        return response.redirect("https://" + request.headers.host + request.url);
-//     }
-
-//     next();
-// })
 
 middlewares(app);
 
