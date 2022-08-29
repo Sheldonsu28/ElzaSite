@@ -13,13 +13,27 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+process.on("unhandledException",(err, origin) => {
+  console.log("====================Unhandled Exception====================");
+  console.log(err);
+  console.log(origin);
+  console.log("===========================================================");
+});
+
+process.on("unhandledRejection",(reason, promise) => {
+  console.log("====================Unhandled Exception====================");
+  console.log(reason);
+  console.log(promise);
+  console.log("===========================================================");
+});
+
 
 config();
 const app = express();
 // CORS
 app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'http://xn--rrv961dbic.icu');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
   next();

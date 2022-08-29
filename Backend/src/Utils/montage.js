@@ -4,6 +4,7 @@ import MontagesService from "../services/Montages/service";
 
 const montagesService = new MontagesService();
 
+// 执行列表更新
 const updateMontages = async () => {
   console.log(new Date(), ': 开始执行视频列表更新');
   const data = await UtilsModel.find({itemName: {$in:['Slicers', 'Creaters', 'Elza']}});
