@@ -47,6 +47,7 @@ const updateMontages = async () => {
               const { vlist } = list;
               const videoInfos = []
               const ids = vlist.map(x=>x.bvid);
+              const author = vlist[0].author;
               
               // Find new videos
               const newId = idLookUpTable[channelId] ? ids.filter(x=>!idLookUpTable[channelId].includes(x)): ids;
@@ -66,13 +67,11 @@ const updateMontages = async () => {
                 const existedId = idLookUpTable[channelId] ? ids.filter(x => !newId.includes(x)): [];
                 const existedInfo = lookUpTable[channelId] ? lookUpTable[channelId].filter(x=>existedId.includes(x.bvid)): [];
 
-                const author = vlist[0].author;
                 const montage = {author, channelId, type, videoInfos:videoInfos.concat(existedInfo)};
                 montagesService.insertOrUpdateByChannelId(montage);
               }
 
-              console.log(`已更新MID:${channelId}, 总计${newId.length}个新视频。`);
-
+              console.log(`已检查目标薯条：${author} (MID:${channelId}), 总计${newId.length}个新视频。`);
           }).catch((error)=>{
 
             console.log(`=================更新${channelId}时发生错误=================`);

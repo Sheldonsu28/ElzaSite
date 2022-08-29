@@ -4,27 +4,23 @@ import VideoCard from "../VideoCard/videoCard";
 import ContentContainer from "../ContentContainer";
 import './videoContents.css'
 
-const useHorizontalScroll = () => {
-  const elRef = useRef();
-  useEffect(() => {
-    const el = elRef.current;
-    if (el) {
-      const onWheel = e => {
-        if (e.deltaY == 0) return;
-        e.preventDefault();
-        el.scrollTo({
-          left: el.scrollLeft + e.deltaY,
-        });
-      };
-      el.addEventListener("wheel", onWheel);
-      return () => el.removeEventListener("wheel", onWheel);
-    }
-  }, []);
-  return elRef;
-}
 
 const AuthorView = (props)=>{
-  const scrollRef = useHorizontalScroll();
+  const scrollRef = useRef();
+
+  useEffect(()=>{
+    let el = scrollRef.current;
+    if (el){
+      const x_scroll = (e)=>{
+        if (e.deltaY == 0) return;
+        e.preventDefault();
+        el.scrollTo({left: e.deltaY + el.scrollLeft});
+      }
+      el.addEventListener('wheel', x_scroll);
+      return ()=>el.removeEventListener("wheel", x_scroll);
+    }
+  }, []);
+
   return (
     <Box sx={{ justifyContents:'center', minWidth: '100%', width:'100%', height: 'fit-content'}}>
       <Divider variant="middle">
@@ -36,8 +32,8 @@ const AuthorView = (props)=>{
         <List sx={{maxHeight: 300, display:'flex'}}>
             {props.videos.videoInfos.map((video)=> {
               return (
-                <ListItem sx={{width:'fit-content'}}>
-                  <VideoCard key={video.aid} info={{aid: video.aid, 
+                <ListItem key={video.aid} sx={{width:'fit-content'}}>
+                  <VideoCard info={{aid: video.aid, 
                                     bvid: video.bvid, 
                                     title:video.title,
                                     pic:video.pic}}/>

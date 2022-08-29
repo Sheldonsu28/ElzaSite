@@ -7,6 +7,7 @@ import ImageViewer from '../ImageViewer';
 import ContentContainer from '../ContentContainer';
 import { Divider, Typography, Button, Avatar, CardHeader} from '@mui/material';
 import { Box } from '@mui/system';
+import VideoViewer from '../VideoView/videoView';
 
 const AboutModel = () => {
   return (
@@ -15,13 +16,14 @@ const AboutModel = () => {
       <ImageViewer src={design}/>
                 
       <Box sx={{height: 'fit-content', marginTop:'1%'}}>
-        <Box sx={{ justifyContents:'center', minWidth: 'fit-content', width:'100%', height: 'fit-content'}}>
 
-          <Divider variant="middle" sx={{width:'100%'}}>
-            <Typography gutterBottom variant="h5" component="div" marginBottom='0.2%'>
-              绘制
-            </Typography>
-          </Divider>
+        <Divider variant="middle">
+          <Typography gutterBottom variant="h5" component="div" marginBottom='0.2%'>
+            绘制
+          </Typography>
+        </Divider>
+
+        <Box sx={{ justifyContents:'center', minWidth: 'fit-content', width:'100%', height: 'fit-content'}}>
           <Box sx={{display: 'flex', flexWrap:'wrap', flexDirection:'row', width:"100%", justifyContent:'center'}}>
 
             <Button disableRipple disableFocusRipple href='https://weibo.com/soramiao'>
@@ -50,19 +52,19 @@ const AboutModel = () => {
               />
             </Button>
           </Box>
-          <h5 className='text'>
+          <h5 className='text' width='100%'>
             从她B站上传的原生动态头像和她仅仅7位的uid可以看出，这个妈咪，绝对不简单！
           </h5>
         </Box>
 
-
-        <Box sx={{ justifyContents:'center', minWidth: 'fit-content', width:'100%', height: 'fit-content'}}>
-
-          <Divider variant="middle">
+        <Divider variant="middle">
             <Typography gutterBottom variant="h5" component="div" marginBottom='0.2%'>
               模型
             </Typography>
-          </Divider>
+        </Divider>
+
+        <Box sx={{ justifyContents:'center', minWidth: 'fit-content', width:'100%', height: 'fit-content'}}>
+
           <Box sx={{display: 'flex', flexWrap:'wrap', flexDirection:'row', width:"100%", justifyContent:'center'}}>
 
             <Button disableRipple disableFocusRipple href='https://space.bilibili.com/10857187'>
@@ -80,17 +82,17 @@ const AboutModel = () => {
           </Box>
         </Box>
 
-        
-        <Box sx={{ justifyContents:'center', minWidth: 'fit-content', width:'100%', minHeight: 'fit-content'}}>
-          <Divider variant="middle">
-            <Typography gutterBottom variant="h5" component="div" marginBottom='0.2%'>
-              演示
-            </Typography>
-          </Divider>
-          <iframe src="//player.bilibili.com/player.html?aid=419986250&bvid=BV1S3411q7mH&cid=391888610&page=1" scrolling="auto" border="0" frameBorder="no" framespacing="0" width='auto' height='auto' allowFullScreen={true}> </iframe>
-          <h5 className='text'>
-            谁能想到这个皮现在这么屑了呢...
-          </h5>
+        <Divider variant="middle">
+          <Typography gutterBottom variant="h5" component="div" marginBottom='0.2%'>
+            演示
+          </Typography>
+        </Divider>
+        <Box sx={{ display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly', width:'100%', height: 'fit-content', marginTop:'3%'}}>
+          <VideoViewer info={{aid: 419986250, 
+                          bvid:"BV1S3411q7mH", 
+                          description:"谁能想到这个皮现在这么屑了呢...",
+                          cid: 391888610}}
+                       title=""/>
         </Box>
       
       </Box>

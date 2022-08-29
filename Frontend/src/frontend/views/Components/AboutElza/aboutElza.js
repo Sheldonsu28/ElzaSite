@@ -39,15 +39,18 @@ const AboutElza = (props) => {
 
         <VideoViewer info={{aid: 847393362, 
                             bvid:"BV1yL4y1e7VJ", 
-                            description:" 大家好！初次见面有些请求，那就是—— \n 看着我！陪着我！喜欢我！然后让我啃啃！\n 以上！这里是艾尔莎，以后要请多关照啦汪❤！"}}
+                            description:" 大家好！初次见面有些请求，那就是—— \n 看着我！陪着我！喜欢我！然后让我啃啃！\n 以上！这里是艾尔莎，以后要请多关照啦汪❤！",
+                            cid: 391069974}}
                       title="自我介绍"/>
 
         <VideoViewer info={{aid: 974844293, 
                             bvid:"BV1s44y1y7tr", 
-                            description:" L❤VING PUNCH\n 就由艾尔莎来给您爱感满溢的Loving Punch！"}}
+                            description:" L❤VING PUNCH\n 就由艾尔莎来给您爱感满溢的Loving Punch！",
+                            cid: 387911876}}
                       title="出道曲"/>
-        <AuthorView key={'艾尔莎快餐店'} videos={recordings}/>
+
       </Box>
+      <AuthorView key={'艾尔莎快餐店'} videos={recordings}/>
 
     </ContentContainer>
       
