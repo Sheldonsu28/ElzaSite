@@ -17,11 +17,11 @@ export default class MontagesService{
     return this.repository.fetchAllDerivativeWork();
   }
 
- async fetchAllStreamRecordings(){
-  return this.repository.fetchAllStreamRecordings();
- }
+  async fetchAllStreamRecordings(){
+    return this.repository.fetchAllStreamRecordings();
+  }
 
- async insertOrUpdateByChannelId(montage){
+  async insertOrUpdateByChannelId(montage){
     if (!montage) throw Error('内容为空');
     return this.repository.insertOrUpdateByChannelId(montage);
   }
