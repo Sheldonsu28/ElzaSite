@@ -7,6 +7,8 @@ Frontend/.pnp
 Backend/.pnp
 .pnp.js
 .env
+*.mp4
+*.webm
 
 # testing
 Frontend/coverage

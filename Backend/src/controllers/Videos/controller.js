@@ -15,13 +15,11 @@ const VideosController = () => {
   router.get('/celebrate', (req, res, next)=>{
 
     try{
-      const range = req.headers.range;
+      let range = req.get('Range');
       console.log(range);
-      if (!range) {
-        res.status(400).send("Requires Range header");
-      }
+      if (!range) range = 'bytes=0-';
 
-      const videoPath = path.resolve(__dirname, "Elza_annoy_compress.mp4");
+      const videoPath = path.resolve(__dirname, "Elza_annoy_compress.webm");
       const videoSize = fs.statSync(videoPath).size;
       const CHUNK_SIZE = 2 * (10 ** 6); 
 

@@ -6,6 +6,8 @@ import AboutElza from '../Components/AboutElza';
 import AboutModel from '../Components/AboutModel';
 import VideoContentsView from '../Components/VideoContentsView';
 import MontageController from '../../controllers/Montages';
+import VideoPlayer from '../Components/ModalPlayer/modalPlayer';
+import ContentContainer from '../Components/ContentContainer';
 
 
 
@@ -21,14 +23,17 @@ const WelcomePage = ()=>{
                         </Grid>
                     </Grid>
                 </AppBar>
-                <p id='icu'>哈哈<br/>大白猫<br/> 你出道一周年辣</p>
-                <h1 id='subsection'>下滑了解更多的她</h1>
+                <p id='icu'>哈哈<br/>大白猫<br/> \你出道一周年辣/</p>
+                <VideoPlayer/>
+                <h1 className='subsection'>下滑了解更多的她</h1>
             </div>
             <div id='contentSection'>
                 <AboutElza fetchCallback={MontageController.fetchAllStreamRecordings}/>
+                
                 <AboutModel/>
                 <VideoContentsView sectionTitle={'艾尔莎的切片man们'} fetchCallback={MontageController.fetchAllMontange}/>
                 <VideoContentsView sectionTitle={'艾尔莎的二创man们'} fetchCallback={MontageController.fetchAllDerivativeWork}/>
+                
                 
                 <h5 id='registry'>陕ICP备2021014934号-1</h5>
 
