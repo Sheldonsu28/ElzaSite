@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import 'mui-player/dist/mui-player.min.css';
 import {Button, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@material-ui/core";
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
@@ -10,14 +10,13 @@ const VideoPlayer = (props)=>{
   const [openAgree, setOpenAgree] = useState(false);
   const [openDisagree, setOpenDisagree] = useState(false);
   const [time, setTime] = useState(null);  
-
+  
   const handleOpenVid = () => {
     setOpenVid(true);
     setTime(Date.now());
   };
 
   const handleCloseVid = () => {
-  
     if (Date.now() > time + 278 * 1000){
       setOpenVid(false);
       return;
@@ -79,7 +78,8 @@ const VideoPlayer = (props)=>{
         </DialogTitle>
         <DialogContent>
           <DialogContentText>
-            你得考虑好嗷，关掉了就要给我唱哦！
+            莎莎你视频还没看完捏！<br/>
+            得考虑好嗷，关掉了就要亲自唱哦！
           </DialogContentText>
         </DialogContent>
         
@@ -94,15 +94,16 @@ const VideoPlayer = (props)=>{
 
       <Dialog open={openAgree} onClose={handleCloseAgree}>
         <DialogTitle>
-          {"真的吗！！！！！"}
+          {"真的要亲自唱吗！！！！！"}
         </DialogTitle>
         <DialogContent>
           <DialogContentText>
-           呜呜呜莎莎对薯条们真好！
+           那，我相信你哦！莎莎对薯条们真好！
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleCloseAgree}>啊吧啊吧</Button>
+        <Button  onClick={handleOpenDisagree}>我才不会真的唱呢！</Button>
+          <Button  onClick={handleCloseAgree}>嗯嗯！</Button>
         </DialogActions>
       </Dialog>
 
@@ -112,13 +113,13 @@ const VideoPlayer = (props)=>{
         </DialogTitle>
         <DialogContent>
           <DialogContentText>
-           不同意的话就只能请莎莎看完这个视频了，<br/>
+           那只能请莎莎看完这个视频了捏，<br/>
            只有看完这个视频或是同意唱歌给薯条听才能关掉哟！<br/>
-           啊对了，跳进度条没有是用的嗷！
+           啊对了，跳进度条没有是用的嗷(是倒计时哦)！
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleCloseDisagree}>知道了</Button>
+          <Button onClick={handleCloseDisagree}> 哼哼哼，啊啊啊啊啊啊啊 ！</Button>
         </DialogActions>
       </Dialog>
     </div>

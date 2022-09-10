@@ -6,7 +6,13 @@ export default class MontagesRepository{
   }
 
   async fetchAllMontage(){
-    return this.model.find({type:0});
+    return this.model.find({
+      type:0
+    },{ 
+        __v: false,
+        _id: false,
+        type:false
+    });
   }
 
   async fetchAll(){
@@ -14,11 +20,23 @@ export default class MontagesRepository{
   }
 
   async fetchAllDerivativeWork(){
-    return this.model.find({type:1});
+    return this.model.find({
+      type:1
+    }, { 
+        __v: false,
+        _id: false,
+        type:false
+    });
   }
 
   async fetchAllStreamRecordings(){
-    return this.model.find({type:3});
+    return this.model.find({
+      type:3
+    },{ 
+        __v: false,
+        _id: false,
+        type:false
+    });
   }
 
   async insertOrUpdateByChannelId(montage){

@@ -55,7 +55,7 @@ app.set('port', process.env.PORT);
 const port = app.get('port');
 
 app.listen(port, () => {
-  console.log('服务器启动成功, 端口', port, `服务器版本v1.2`);
+  console.log('服务器启动成功, 端口', port, `服务器版本v1.3`);
 });
 
 app.use(express.static(join(__dirname, '../build')));

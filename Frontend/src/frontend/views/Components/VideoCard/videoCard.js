@@ -7,7 +7,7 @@ const VideoCard = (props) =>{
       <CardActionArea sx={{height:'100%'}} onClick={()=>{window.open(`https://www.bilibili.com/video/${props.info.bvid}`, "_blank")}}>
         <CardMedia
           component="img"
-          image={`data:image/jpg;base64,${props.info.pic}`}
+          image={`data:image/webp;base64,${props.info.pic}`}
         />
         <CardContent sx={{ paddingTop:'0px', paddingBottom:'auto', paddingLeft:'0px', paddingRight:'0px', textAlign:'start'}}>
           <Typography gutterBottom variant="body2" color="text" sx={{textOverflow:'ellipsis'}}>

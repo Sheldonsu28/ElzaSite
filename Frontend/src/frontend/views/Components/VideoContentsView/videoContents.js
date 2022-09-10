@@ -63,7 +63,7 @@ const withContentsView = (Component)=> (props) =>{
     <ContentContainer sectionTitle={props.sectionTitle}>
       <Box sx={{height: '100%', marginTop:'1%', width:'100%'}}>
         {authorInfo.map((vids)=>{
-          return <Component key={vids.author} videos={vids}/>
+          return <Component key={vids.channelId} videos={vids}/>
         })}
       </Box>
     </ContentContainer>

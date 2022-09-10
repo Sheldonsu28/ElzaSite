@@ -23,7 +23,7 @@ const WelcomePage = ()=>{
                         </Grid>
                     </Grid>
                 </AppBar>
-                <p id='icu'>哈哈<br/>大白猫<br/> \你出道一周年辣/</p>
+                <p id='icu'>哈哈<br/>╰⋛⋋⊱๑大白猫๑⊰⋌⋚╯<br/> \你出道一周年辣/</p>
                 <VideoPlayer/>
                 <h1 className='subsection'>下滑了解更多的她</h1>
             </div>

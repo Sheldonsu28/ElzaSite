@@ -4,7 +4,9 @@ const Montages = new mongoose.Schema({
   channelId: String,
   author: String,
   type: Number,
-  videoInfos: [{type:{
+  videoInfos: [{
+    type:{
+    _id: false,
     bvid: String,
     title: String,
     aid: String,

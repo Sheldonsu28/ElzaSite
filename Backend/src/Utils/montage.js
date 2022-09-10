@@ -58,7 +58,7 @@ const updateMontages = async () => {
 
                 // Fetch pics on new Ids
                 for (let i = 0; i < newInfo.length; i++){
-                  const res = await axios.get(newInfo[i].pic + '@100h', {responseType: 'arraybuffer'});
+                  const res = await axios.get(newInfo[i].pic + '@170w_100h.webp', {responseType: 'arraybuffer'});
                   const pic = Buffer.from(res.data).toString('base64');
                   const {bvid, title, aid} = newInfo[i];
                   videoInfos.push({bvid, title, aid, pic});

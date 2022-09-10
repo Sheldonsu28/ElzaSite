@@ -41,7 +41,7 @@
     font-size: 600%;
     color: white;
     margin-top: 15vh;
-    animation: mymove 0.4s infinite alternate;
+    animation: mymove 0.5s infinite alternate;
     position: relative;
   }
 
@@ -108,7 +108,7 @@
     font-size: 400%;
     color: white;
     margin-top: 15vh;
-    animation: mymove 0.4s infinite alternate;
+    animation: mymove 0.5s infinite alternate;
     position: relative;
   }
 
