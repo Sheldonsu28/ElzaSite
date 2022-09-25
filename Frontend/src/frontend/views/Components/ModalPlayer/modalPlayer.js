@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import 'mui-player/dist/mui-player.min.css';
 import {Button, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@material-ui/core";
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import ContentContainer from "../ContentContainer";
