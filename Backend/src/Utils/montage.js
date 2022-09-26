@@ -15,6 +15,10 @@ const updateMontages = async () => {
   const data = await UtilsModel.find({itemName: {$in:['Slicers', 'Creaters', 'Elza']}});
   const existing_entries = await montagesService.fetchAll();
 
+  const webRes = await axios.get('https://www.bilibili.com', {withCredentials: true});
+  const targetCookies = webRes.headers['set-cookie'];
+  const cookies = targetCookies.map(x=>x.split(';')[0]).join('; ');
+
   const lookUpTable = {};
   const idLookUpTable = {};
 
@@ -49,7 +53,7 @@ const updateMontages = async () => {
             const requestOptions = { 
               headers: { 
                 'User-Agent': agents[agents_counter],
-                'Cookie':'b_ut=7;buvid3=0;i-wanna-go-back=-1;innersign=0;',
+                'Cookie':cookies,
              }  
             };
             agents_counter = (agents_counter + 1) % agents.length;
@@ -58,7 +62,7 @@ const updateMontages = async () => {
               const { vlist } = list;
               const videoInfos = []
               const ids = vlist.map(x=>x.bvid);
-              const author = vlist[0].author;
+              const author = vlist[vlist.length - 1].author;
               
               // Find new videos
               const newId = idLookUpTable[channelId] ? ids.filter(x=>!idLookUpTable[channelId].includes(x)): ids;
