@@ -1,0 +1,20 @@
+<Box sx={{ justifyContents:'center', minWidth: '100%' , width:'100%', height: 'fit-content' }}>
+  <Divider variant="middle">
+    <Typography gutterBottom variant="h5" component="div" marginTop='0.2%'>
+      {props.videos.author}
+    </Typography>
+  </Divider>
+  <Box id='scroll' sx={{overflowX:'auto', width:'100%'}} ref={scrollRef}>
+    <List sx={{maxHeight: 300, display:'flex'}}>
+      {props.videos.videoInfos.map((video)=> {
+      return (
+      <ListItem key={video.aid} sx={{width:'fit-content'}}>
+        <VideoCard info={{aid: video.aid, bvid: video.bvid, title:video.title, pic:video.pic}} />
+      </ListItem>
+      )
+      })
+      }
+
+    </List>
+  </Box>
+</Box>

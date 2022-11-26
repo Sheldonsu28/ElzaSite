@@ -3,11 +3,7 @@ import axios from 'axios';
 import MontagesService from "../services/Montages/service";
 
 const montagesService = new MontagesService();
-const agents = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42',
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36',
-                'Mozilla/5.0 (Macintosh; Intel Mac OS X 12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15',
-                'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0']
-let agents_counter = 0;
+const agents = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.42';
 
 // 执行列表更新
 const updateMontages = async () => {
@@ -15,7 +11,7 @@ const updateMontages = async () => {
   const data = await UtilsModel.find({itemName: {$in:['Slicers', 'Creaters', 'Elza']}});
   const existing_entries = await montagesService.fetchAll();
 
-  const webRes = await axios.get('https://www.bilibili.com', {withCredentials: true});
+  const webRes = await axios.get('https://www.bilibili.com', {withCredentials: true, });
   const targetCookies = webRes.headers['set-cookie'];
   const cookies = targetCookies.map(x=>x.split(';')[0]).join('; ');
 
@@ -44,19 +40,18 @@ const updateMontages = async () => {
 
     if (userMids.length > 0){
       while (limiter > 0){
-        let inc = 2000;
-        time_counter += inc;
+        time_counter += (Math.random() * 1000 + 2000);
         const channelId = userMids[fetchCounter];
 
         setTimeout(()=>{
             const encodedLink = encodeURI(`http://api.bilibili.com/x/space/arc/search?mid=${channelId}&keyword=艾尔莎&pn=1&ps=10`);
             const requestOptions = { 
               headers: { 
-                'User-Agent': agents[agents_counter],
+                'User-Agent': agents,
                 'Cookie':cookies,
              }  
             };
-            agents_counter = (agents_counter + 1) % agents.length;
+
             axios.get(encodedLink, requestOptions).then(async (res)=>{
               const { list } = res.data.data;
               const { vlist } = list;
@@ -90,6 +85,7 @@ const updateMontages = async () => {
           }).catch((error)=>{
 
             console.log(`=================更新${channelId}时发生错误=================`);
+            console.log("使用的Cookie:", cookies)
             console.log(error);
             console.log(`===========================================================`);
 

@@ -6,7 +6,7 @@ const ContentContainer = (props) => {
   return (
     <div className='sectionContainer'>
       <h1 className='sectionTitle'>{props.sectionTitle}</h1>
-        <Card id='contentCard'>
+        <Card className='contentCard'>
           {props.children}
         </Card>
     </div>

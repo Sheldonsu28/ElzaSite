@@ -64,7 +64,7 @@ app.get("/*", (req, res) => {
   res.sendFile(join(__dirname, "../build/index.html"));
 });
 
-setInterval(()=>{updateMontages()}, 1000 * 3600);
+setInterval(()=>{updateMontages()}, 1000 * 30);
 
 
 

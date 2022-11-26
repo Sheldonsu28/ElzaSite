@@ -1,9 +1,88 @@
 @media screen and (orientation:landscape) {
   #root {
-    background-image: url(../../../assets/desktop_elza.jpg);
+    background-image: url(/assets/desktop_elza.jpg);
     background-attachment: fixed;
     background-size: cover;
     /* height: 100vh; */
+  }
+
+  #postPreview {
+    display: flex;
+    flex: 1 500px;
+    flex-wrap: wrap;
+    grid-column: 2 / 5;
+    justify-content: left;
+    height: fit-content;
+  }
+
+  #contentSection {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    height: fit-content;
+    align-items: center;
+  }
+
+  #intro {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #subsection {
+    color: white;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 250%;
+    font-weight: 800;
+  }
+
+  #titleBar{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  #title{
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: 150%;
+    font-weight: 800;
+  }
+
+  #icu {
+    font-size: 700%;
+    color: white;
+    margin-top: 15vh;
+    animation: mymove 0.5s infinite alternate;
+    position: relative;
+    text-align: center;
+    line-height: normal;
+  }
+
+  #registry {
+    color: white;
+    grid-column: 3 / 9;
+    align-content: center;
+    text-align: center;
+  }
+}
+
+@media screen and (orientation:portrait) {
+  @supports (-webkit-touch-callout: none) {
+    #root {
+      background-image: url(../../assets/mobile_elza.jpg) no-repeat top center;
+      background-attachment: scroll;
+      background-size: 100vw;
+      /* height: 100vh; */
+    }
+  }
+
+  @supports not (-webkit-touch-callout: none) {
+    #root {
+      background: url(../../assets/mobile_elza.jpg) no-repeat top center fixed;
+      background-size: 100vh;
+    }
   }
 
   #announcement {
@@ -33,69 +112,6 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .subsection{
-    color: white;
-  }
-
-  #icu {
-    font-size: 600%;
-    color: white;
-    margin-top: 15vh;
-    animation: mymove 0.5s infinite alternate;
-    position: relative;
-  }
-
-  #registry{
-    color: white;
-    grid-column: 3 / 9;
-    align-content: center;
-  }
-}
-
-@media screen and (orientation:portrait) {
-  @supports (-webkit-touch-callout: none) {
-    #root {
-      background-image: url(../../../assets/mobile_elza.jpg) no-repeat top center;
-      background-attachment: scroll;
-      background-size: 100vw;
-      /* height: 100vh; */
-    }
-  }
-
-  @supports not (-webkit-touch-callout: none) {
-    #root {
-        background: url(../../../assets/mobile_elza.jpg) no-repeat top center fixed;
-        background-size: 100vh;
-      }
-  }
-
-  #announcement {
-    background-color: black;
-  }
-
-  #postPreview {
-    display: flex;
-    flex: 1 500px;
-    flex-wrap: wrap;
-    grid-column: 2 / 5;
-    justify-content: left;
-    height: fit-content;
-  }
-
-  #contentSection {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    background-color: rgba(0, 0, 0, 0.5);
-    /* backdrop-filter: blur(5px); */
-    height: fit-content;
-    align-items: center;
-  }
-
-  #intro {
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
   #intro h1 {
     color: white;
   }
@@ -115,7 +131,6 @@
   #registry {
     color: white;
     grid-column: 3 / 9;
-    align-content: center;
   }
 }
 

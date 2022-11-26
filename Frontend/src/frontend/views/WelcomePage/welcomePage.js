@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
 import './welcomePage.css';
@@ -6,8 +6,9 @@ import AboutElza from '../Components/AboutElza';
 import AboutModel from '../Components/AboutModel';
 import VideoContentsView from '../Components/VideoContentsView';
 import MontageController from '../../controllers/Montages';
-import VideoPlayer from '../Components/ModalPlayer/modalPlayer';
-import ContentContainer from '../Components/ContentContainer';
+// import VideoPlayer from '../Components/ModalPlayer/modalPlayer';
+// import ContentContainer from '../Components/ContentContainer';
+// import Game from '../Components/Game';
 
 
 
@@ -23,11 +24,12 @@ const WelcomePage = ()=>{
                         </Grid>
                     </Grid>
                 </AppBar>
-                <p id='icu'>哈哈<br/>╰⋛⋋⊱๑大白猫๑⊰⋌⋚╯<br/> \你出道一周年辣/</p>
-                <VideoPlayer/>
+                <p id='icu'>哈哈<br/>大白猫<br/>\你重新出道啦/</p>
+                {/* <VideoPlayer/> */}
                 <h1 className='subsection'>下滑了解更多的她</h1>
             </div>
             <div id='contentSection'>
+                {/* <Game></Game> */}
                 <AboutElza fetchCallback={MontageController.fetchAllStreamRecordings}/>
                 
                 <AboutModel/>

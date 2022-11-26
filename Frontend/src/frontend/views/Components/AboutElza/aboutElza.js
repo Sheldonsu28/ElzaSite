@@ -29,7 +29,7 @@ const AboutElza = (props) => {
       <Box sx={{ display: 'flex', flexDirection: 'column', justifyItems:'center', margin:'auto'}}>
         <Box>
           <h1 className='elzaIntro'>全体目光向我看齐汪！</h1>
-          <h3 className='elzaIntro'>我是redcircle所属的活泼后辈系冒险家</h3>
+          <h3 className='elzaIntro'>我是RedCircle和虚研社所属的活泼后辈系冒险家</h3>
           <h2 className='elzaIntro'>艾尔莎•霍德芬拉克斯•约克</h2>
         </Box>
       </Box>

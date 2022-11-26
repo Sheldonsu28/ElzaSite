@@ -1,0 +1,72 @@
+@media screen and (orientation:landscape) {
+
+  #introPic {
+    max-height: fit-content;
+    flex: 1 400px;
+    max-width: 500px;
+    align-self: center;
+  }
+
+  #introText {
+    display: flex;
+    flex-direction: column;
+    flex: 1 400px;
+    align-items: flex-start;
+    align-content: center;
+    color: aliceblue;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+  }
+
+  #title {
+    font-size: 200%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: black;
+  }
+
+  .elzaIntro {
+    font-size: 200%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: black;
+  }
+}
+
+@media screen and (orientation:portrait) {
+
+  .sectionTitle {
+    color: white;
+    margin-bottom: 0;
+  }
+
+  #introPic {
+    max-height: fit-content;
+    flex: 1 400px;
+    max-width: 500px;
+    align-self: center;
+  }
+
+  #introText {
+    display: flex;
+    flex-direction: column;
+    flex: 1 400px;
+    align-items: flex-start;
+    align-content: center;
+    color: aliceblue;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+  }
+
+  .elzaIntro {
+    font-size: 120%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: black;
+  }
+
+}

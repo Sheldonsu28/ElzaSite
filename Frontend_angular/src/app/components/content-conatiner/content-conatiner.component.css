@@ -1,6 +1,6 @@
 @media screen and (orientation:landscape) {
 
-  .sectionContainer {
+  :host {
     display: flex;
     position: relative;
     height: fit-content;
@@ -9,8 +9,16 @@
     grid-column: 3/9;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 2.5%;
   }
 
+  .sectionTitle {
+    color: white;
+    margin-bottom: 3px;
+    font-size: 230%;
+    font-weight: 600;
+  }
+  
   .contentCard {
     display: flex;
     position: relative;
@@ -19,14 +27,14 @@
     min-height: 20vh;
     width: 100%;
     flex-wrap: wrap;
-    background-color: rgba(240, 248, 255, 1) !important;
-    border-radius: 20px !important;
+    background-color: rgba(240, 248, 255, 1);
+    border-radius: 20px;
   }
 }
 
 @media screen and (orientation:portrait) {
 
-  .sectionContainer {
+  :host {
     display: flex;
     position: relative;
     height: fit-content;
@@ -46,7 +54,7 @@
     width: 100%;
     grid-column: 1/11;
     flex-wrap: wrap;
-    background-color: rgba(240, 248, 255, 1) !important;
+    background-color: rgba(240, 248, 255, 1);
   }
 
 }
