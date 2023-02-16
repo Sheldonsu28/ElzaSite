@@ -1,9 +1,8 @@
 @media screen and (orientation:landscape) {
   #root {
-    background-image: url(../../../assets/desktop_elza.jpg);
+    background-image: url(../../../assets/desktop.webp);
     background-attachment: fixed;
     background-size: cover;
-    /* height: 100vh; */
   }
 
   #announcement {
@@ -22,7 +21,7 @@
   #contentSection {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(89, 73, 83, 0.6);
     backdrop-filter: blur(5px);
     height: fit-content;
     align-items: center;
@@ -30,16 +29,16 @@
 
   #intro {
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(89, 73, 83, 0.6);
   }
 
   .subsection{
-    color: white;
+    color: #DBB2D1;
   }
 
   #icu {
     font-size: 600%;
-    color: white;
+    color: #DBB2D1;
     margin-top: 15vh;
     animation: mymove 0.5s infinite alternate;
     position: relative;
@@ -55,7 +54,7 @@
 @media screen and (orientation:portrait) {
   @supports (-webkit-touch-callout: none) {
     #root {
-      background-image: url(../../../assets/mobile_elza.jpg) no-repeat top center;
+      background-image: url(../../../assets/mobile.webp) no-repeat top center;
       background-attachment: scroll;
       background-size: 100vw;
       /* height: 100vh; */
@@ -64,7 +63,7 @@
 
   @supports not (-webkit-touch-callout: none) {
     #root {
-        background: url(../../../assets/mobile_elza.jpg) no-repeat top center fixed;
+        background: url(../../../assets/mobile.webp) no-repeat top center fixed;
         background-size: 100vh;
       }
   }
@@ -85,7 +84,7 @@
   #contentSection {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(89, 73, 83, 0.6);
     /* backdrop-filter: blur(5px); */
     height: fit-content;
     align-items: center;
@@ -93,11 +92,11 @@
 
   #intro {
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(89, 73, 83, 0.6);
   }
 
   #intro h1 {
-    color: white;
+    color: #DBB2D1;;
   }
 
   .subsection {
@@ -105,15 +104,15 @@
   }
 
   #icu {
-    font-size: 400%;
-    color: white;
+    font-size: 350%;
+    color: #DBB2D1;
     margin-top: 15vh;
     animation: mymove 0.5s infinite alternate;
     position: relative;
   }
 
   #registry {
-    color: white;
+    color: #DBB2D1;
     grid-column: 3 / 9;
     align-content: center;
   }

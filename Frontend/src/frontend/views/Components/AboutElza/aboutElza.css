@@ -1,7 +1,7 @@
 @media screen and (orientation:landscape) {
 
   .sectionTitle {
-    color: white;
+    color: #DBB2D1 !important;
     margin-bottom: 0;
   }
 
@@ -43,7 +43,7 @@
 @media screen and (orientation:portrait) {
 
   .sectionTitle {
-    color: white;
+    color: 	#DBB2D1 !important;
     margin-bottom: 0;
   }
 

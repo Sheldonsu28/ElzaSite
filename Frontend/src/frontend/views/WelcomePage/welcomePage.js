@@ -13,20 +13,21 @@ import MontageController from '../../controllers/Montages';
 
 
 const WelcomePage = ()=>{
-
     return (
       <div id="root">
             <div id='intro'>
                 <AppBar style={{background:'transparent', boxShadow:'none'}} position='sticky'>
                     <Grid container>
                         <Grid item xs>
-                            <h1 style={{margin:'0', color:'white'}}>艾薯条.icu</h1>
+                            <h1 style={{margin:'0', color:'#DBB2D1'}}>艾薯条.icu</h1>
                         </Grid>
                     </Grid>
                 </AppBar>
-                <p id='icu'>哈哈<br/>大白猫<br/>\你重新出道啦/</p>
+                <p id='icu'>呐呐!<br/>艾尔莎!<br/>我们真的!<br/>♡好喜欢你啊♡</p>
                 {/* <VideoPlayer/> */}
-                <h1 className='subsection'>下滑了解更多的她</h1>
+                <h1 className='subsection'>MUUUAAAA♡</h1>
+                <h1 className='subsection'>不行我绷不住了</h1>
+                <h1 className='subsection'>这味太冲了</h1>
             </div>
             <div id='contentSection'>
                 {/* <Game></Game> */}
